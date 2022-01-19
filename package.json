@@ -1,5 +1,5 @@
 {
-  "name": "hap-controller",
+  "name": "@homegraph/hap-controller",
   "version": "0.6.1",
   "description": "Library to implement a HAP (HomeKit) controller",
   "main": "lib/index.js",
@@ -12,9 +12,8 @@
     "test": "jest",
     "release": "release-script"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Apollon77/hap-controller-node.git"
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [
     "HomeKit",
@@ -23,10 +22,6 @@
   ],
   "author": "Michael Stegeman",
   "license": "MPL-2.0",
-  "bugs": {
-    "url": "https://github.com/Apollon77/hap-controller-node/issues"
-  },
-  "homepage": "https://github.com/Apollon77/hap-controller-node#readme",
   "dependencies": {
     "debug": "^4.3.3",
     "dnssd": "^0.4.1",
