@@ -11,7 +11,6 @@ import * as Characteristic from '../../model/characteristic';
 import * as Service from '../../model/service';
 import { Accessories } from '../../model/accessory';
 import HomekitControllerError from '../../model/error';
-import * as GattUtils from '../ble/gatt-utils';
 
 const debug = Debug('hap-controller:http-client');
 
@@ -124,7 +123,7 @@ export default class HttpClient extends EventEmitter {
 
     private subscribedCharacteristics: string[] = [];
 
-    private pairingQueue: GattUtils.OpQueue;
+    private pairingQueue: any;
 
     /**
      * Initialize the HttpClient object.
@@ -140,7 +139,7 @@ export default class HttpClient extends EventEmitter {
         this.address = address;
         this.port = port;
         this.pairingProtocol = new PairingProtocol(pairingData);
-        this.pairingQueue = new GattUtils.OpQueue();
+        // this.pairingQueue = new GattUtils.OpQueue();
     }
 
     /**
